@@ -1,6 +1,5 @@
 //
 //  VponMediationBanner.m
-//  PixnetPhotoHelper
 //
 //  Created by Ming Hui Ho on 12/12/12.
 //  Copyright (c) 2012年 Ming Hui Ho. All rights reserved.
