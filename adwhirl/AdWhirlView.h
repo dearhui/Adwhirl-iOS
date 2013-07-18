@@ -26,16 +26,29 @@
 #define kAdWhirlAppVer 330
 
 #define kAdWhirlViewWidth 320
-#define kAdWhirlViewHeight 50
+//#define kAdWhirlViewHeight 50
+#define kAdWhirlViewHeight 48
 #define kAdWhirlViewDefaultSize \
                         (CGSizeMake(kAdWhirlViewWidth, kAdWhirlViewHeight))
 #define kAdWhirlViewDefaultFrame \
                         (CGRectMake(0,0,kAdWhirlViewWidth, kAdWhirlViewHeight))
 
-#define kAdWhirlDefaultConfigURL @"http://mob.adwhirl.com/getInfo.php"
-#define kAdWhirlDefaultImpMetricURL @"http://met.adwhirl.com/exmet.php"
-#define kAdWhirlDefaultClickMetricURL @"http://met.adwhirl.com/exclick.php"
-#define kAdWhirlDefaultCustomAdURL @"http://mob.adwhirl.com/custom.php"
+#define kAdWhirlViewWidthPad 320
+#define kAdWhirlViewHeightPad 270
+#define kAdWhirlViewDefaultPadSize (CGSizeMake(kAdWhirlViewWidthPad, kAdWhirlViewHeightPad))
+
+#if 1
+    #define kAdWhirlDefaultConfigURL @"http://medad.vpon.com/getInfo.php"
+    #define kAdWhirlDefaultImpMetricURL @"http://medad.vpon.com/exmet.php"
+    #define kAdWhirlDefaultClickMetricURL @"http://medad.vpon.com/exclick.php"
+    #define kAdWhirlDefaultCustomAdURL @"http://medad.vpon.com/custom.php"
+#else
+    #define kAdWhirlDefaultConfigURL @"http://mob.adwhirl.com/getInfo.php"
+    #define kAdWhirlDefaultImpMetricURL @"http://met.adwhirl.com/exmet.php"
+    #define kAdWhirlDefaultClickMetricURL @"http://met.adwhirl.com/exclick.php"
+    #define kAdWhirlDefaultCustomAdURL @"http://mob.adwhirl.com/custom.php"
+#endif
+
 #define kAWMinimumTimeBetweenFreshAdRequests 4.9f
 #define kAdWhirlAdRequestTimeout 10
 

@@ -21,7 +21,11 @@
 }
 
 + (AdWhirlAdNetworkType)networkType {
+#if 0
     return AdWhirlAdNetworkTypeBrightRoll;  // !!!! 取代掉
+#else
+    return AdWhirlAdNetworkTypeGreyStripe;
+#endif
 }
 
 #pragma mark - AdWhirlAdNetworkAdapter

@@ -21,6 +21,36 @@
 #import "AdWhirlDelegateProtocol.h"
 #import "AdWhirlConfig.h"
 
+#if 1
+typedef enum {
+    AdWhirlAdNetworkTypeAdMob             = 1,
+    AdWhirlAdNetworkTypeJumpTap           = 2,
+    AdWhirlAdNetworkTypeVideoEgg          = 3,
+    AdWhirlAdNetworkTypeMedialets         = 4,
+    AdWhirlAdNetworkTypeLiveRail          = 5,
+    AdWhirlAdNetworkTypeMillennial        = 6,
+    AdWhirlAdNetworkTypeGreyStripe        = 7,
+    AdWhirlAdNetworkTypeQuattro           = 8,
+    AdWhirlAdNetworkTypeCustom            = 9,
+    AdWhirlAdNetworkTypeAdWhirl10         = 10,
+    AdWhirlAdNetworkTypeMobClix           = 11,
+    AdWhirlAdNetworkTypeMdotM             = 12,
+    AdWhirlAdNetworkTypeAdWhirl13         = 13,
+    AdWhirlAdNetworkTypeGoogleAdSense     = 14,
+    AdWhirlAdNetworkTypeGoogleDoubleClick = 15,
+    AdWhirlAdNetworkTypeGeneric           = 16,
+    AdWhirlAdNetworkTypeEvent             = 17,
+    AdWhirlAdNetworkTypeInMobi            = 18,
+    AdWhirlAdNetworkTypeIAd               = 19,
+    AdWhirlAdNetworkTypeZestADZ           = 20,
+    AdWhirlAdNetworkTypeAdOnTW			= 21,
+    AdWhirlAdNetworkTypeAdOnCN			= 22,
+    AdWhirlAdNetworkTypeBrightRoll        = 23,
+    AdWhirlAdNetworkTypeTapAd             = 24,
+    AdWhirlAdNetworkTypeOneRiot           = 25
+} AdWhirlAdNetworkType;
+
+#else
 typedef enum {
   AdWhirlAdNetworkTypeAdMob             = 1,
   AdWhirlAdNetworkTypeJumpTap           = 2,
@@ -47,6 +77,7 @@ typedef enum {
   AdWhirlAdNetworkTypeOneRiot           = 23,
   AdWhirlAdNetworkTypeNexage            = 24
 } AdWhirlAdNetworkType;
+#endif
 
 @class AdWhirlView;
 @class AdWhirlConfig;

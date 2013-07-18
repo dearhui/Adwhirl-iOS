@@ -21,7 +21,11 @@
 }
 
 + (AdWhirlAdNetworkType)networkType {
+#if 1
+    return AdWhirlAdNetworkTypeAdOnTW;
+#else
     return AdWhirlAdNetworkTypeInMobi;  // !!!! 取代掉
+#endif
 }
 
 #pragma mark - 
