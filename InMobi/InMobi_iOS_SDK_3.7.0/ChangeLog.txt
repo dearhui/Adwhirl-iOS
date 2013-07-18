@@ -1,0 +1,221 @@
+=InMobi Ad Network iOS SDK - Changelog=
+
+Please refer to the documentation provided in the bundle.
+
+==15-Apr-2013: SDK i370 (Build 3.7.0) released==
+
+===Features===
+
+* MRAID 2.0
+* Added "https" support.
+* Removed NSURLCache.
+* Introduced transparent interstitial ad.
+* Added SKStoreProductViewController for in-app context downloads.
+* Device uniqueIdentifier (UDID) is no longer being collected.
+
+===Added Frameworks===
+
+* StoreKit
+* AudioToolBox
+
+===Optional Frameworks===
+(Add these frameworks to provide additional capabilities for rich user experience.)
+* Social
+
+===New Properties and Methods===
+
+IMAdInterstitial:
+	 @property(nonatomic,assign) IMAdMode adMode;
+	 - (id)initWithAppId:(NSString *)appId slotId:(long long)slotId;
+	 - (void)presentInterstitialAnimated:(BOOL)animated;
+
+IMAdView:
+	- (id)initWithFrame:(CGRect)frame
+          imAppId:(NSString *)appId
+          imAdSize:(int)adSize
+          imSlotId:(long long)slotId;
+
+===Deprecated===
+
+IMAdInterstitial:
+	 - (void)presentFromRootViewController:(UIViewController *)rootViewController
+            animated:(BOOL)_animated;
+
+IMAdView:
+
+	@property (nonatomic, assign) UIViewController *rootViewController;
+
+	- (id)initWithFrame:(CGRect)frame
+            imAppId:(NSString *)appId
+            imAdSize:(int)adSize
+	    rootViewController:(UIViewController *)viewController;
+	- (void)setAdTextColor:(NSString *)color;
+	- (void)setAdBackgroundColor:(NSString *)bgcolor;
+	- (void)setAdBackgroundGradientWithTopColor:(NSString *)topcolor
+            bottomColor:(NSString *)bottomcolor;
+	- (BOOL)shouldRotateToInterfaceOrientation:(UIInterfaceOrientation)orientation;
+
+IMAdRequest:
+	@property (nonatomic, assign) BOOL testMode;
+	
+==10-Jan-2013: SDK i360 (Build 3.6.5) released==
+
+* Removed dependencies on the '''PassKit''' framework.
+
+==07-Dec-2012: SDK i360 (Build 3.6.4) released==
+
+* Fixed minor issues with NSURLCache.
+
+==07-Nov-2012: SDK i360 (Build 3.6.3) released==
+
+* Fixed minor issues.
+* Passing hashed UDID with this release. Added option to easily disable any Device ID using Device ID collection masks. 
+
+==23-Oct-2012: SDK i360 (Build 3.6.2) released==
+
+* Fixed minor issues.
+
+==12-Oct-2012: SDK i360 (Build 3.6.1) released==
+
+* Fixed minor issues.
+* Bug fixes.
+
+==15-Sep-2012: SDK i360 (Build 3.6.0) released==
+
+* iOS 6 support added.
+* CoreLocation framework dependency removed. 
+* CoreTelephony, AdSupport, and PassKit frameworks dependency added.
+* Introduction of InMobiCommons SDK. InMobiAdNetwork SDK has dependency on InMobiCommons SDK. Both should be included in the project as mentioned in the integration guidelines. Ensure that the InMobiAdNetwork and InMobiCommons libraries are from the latest release bundle. Refer to Apple documentation on the API exposed.
+
+===API Changes===
+
+====New Class====
+
+IMCommonUtil
+
+====New Properties and Methods====
+
+ IMCommonUtil.h
+	+ (void)setLogLevel:(IMLogLevelType)logLevel;
+	+ (IMLogLevelType)getLogLevel;
+	+ (void)setDeviceIdMask:(IMDeviceIdMask)deviceIdMask;
+	+ (IMDeviceIdMask)getDeviceIdMask;
+	+ (NSString *)getReleaseVersion;
+
+ IMAdView.h
+        @property (nonatomic, assign) int imAdSize;
+	@property (nonatomic, assign) long long imSlotId;
+	@property (nonatomic, assign) UIViewAnimationTransition refreshAnimation;
+	- (id)initWithFrame:(CGRect)frame imAppId:(NSString *)appId imSlotId:(long long)slotId imAdSize:(int)adSize rootViewController:(UIViewController *)viewController;
+	- (void)stopLoading;
+
+ IMAdInterstitial.h
+	@property (nonatomic, assign) long long imSlotId;
+	- (void)stopLoading;
+
+ IMAdRequest.h
+	- (void)setDateOfBirthWithMonth:(NSUInteger)m day:(NSUInteger)d year:(NSUInteger)y;
+	- (void)setLocationWithLatitude:(CGFloat)latitude longitude:(CGFloat)longitude accuracy:(CGFloat)accuracyInMeters;
+
+===Removed Properties and Methods===
+
+ IMAdView.h
+	@property (nonatomic, assign) int imAdUnit;
+	@property (nonatomic, assign) int animationType;
+
+===Removed Class===
+
+IMSDKUtil class removed.
+
+===Modifications===
+
+* Logging methods moved from IMSDKUtil to the IMCommonUtil class.
+* IMDeviceIdMask moved from IMAdRequest to the IMCommonUtil class.
+
+===New Error Codes Introduced in IMAdError.h===
+
+* '''kIMAdNetworkFetchTimedOut''' - When the ad fetch time is more than 1 minute.
+* '''kIMAdNetworkRenderingTimedOut''' - When the ad rendering time is more than 1 minute.
+
+==31-Jul-2012: SDK i350 (Build 3.5.7) released==
+
+* Included the slotId parameter.
+
+==07-Jun-2012: SDK i350 (Build 3.5.4) released==
+
+* Fixed minor issues occurring during MRAID events.
+
+==30-May-2012: SDK i350 (Build 3.5.3) released==
+
+* Included the uniqueIdentifier property of the device as a part of the ad request. In compliance with the relevant iOS policies, before using this version, Publishers must obtain user consent for sending device identifier information.
+
+==15-May-2012: SDK i350 (Build 3.5.2) released==
+
+* Fixed earlier issue of a UIScrollView not scrolling to top when creating an instance of IMAdView.
+* Fixed minor issues in the IMSDKUtil class.
+* Fixed minor issues occurring during beaconing events.
+
+==24-Apr-2012: SDK i350 (Build 3.5.1) released==
+
+* Fixed minor issues occurring while refreshing an expanded ad.
+
+==11-Apr-2012: SDK i350 released==
+
+==30-Mar-2012: SDK i350 Beta (Build 3.5.0) released==
+
+* The uniqueIdentifier property of UIDevice class is no longer used.
+* Fixed earlier multiple redirection issues.
+* Fixed crash in IMAdRequest class.
+* Fixed issue of app tracker callback going to internal URL.
+* Fixed alignment issues of expanded ads.
+* Removed the Core Location framework from the SDK. Core Location is no longer a mandatory framework required to link with SDK i350.
+* Added '''MediaPlayer''', '''Security''', and '''AVFoundation''' frameworks to SDK i350.
+
+===Added New Methods===
+
+'''IMAdView.h'''
+
+ - (BOOL)shouldRotateToInterfaceOrientation:(UIInterfaceOrientation)orientation;
+
+'''IMAdRequest.h'''
+
+ typedef enum
+{
+    ID_LOGIN,
+    ID_SESSION
+    
+} IMIDType;
+
+ typedef enum 
+{
+    DeviceID_NONE   = 1 << 0,
+    DeviceID_ODIN1  = 1 << 1
+    
+} DeviceIDMask;
+
+ @property (nonatomic,assign) CLLocation *location;
+@property (nonatomic, copy) NSString *loginID;
+@property (nonatomic, copy) NSString *sessionID;
+
+ - (void)setLocationWithCity:(NSString *)_city state:(NSString *)_state country:(NSString *)_country;
+
+ - (void) addIDType:(IDType)idType withValue: (NSString *)value;
+
+===Removed Properties===
+
+'''IMAdRequest.h'''
+
+ @property (nonatomic, assign) BOOL isLocationEnquiryAllowed;
+
+==21-Sep-2011: SDK i300 (Build 3.0.2) released==
+
+* Suppressed location update requests in IMAdView's constructor.
+* Fixed minor issue in IMAdView's loadIMAdRequest: method.
+* Fixed linker errors for the IMReachabilityPrivate class.
+
+==16-Sep-2011: SDK i300 (Build 3.0.1) released==
+
+* Fixed ad alignment issues.
+* Fixed a minor memory leak issue.
+
+==08-Sep-2011: SDK i300 (Build 3.0.0) released==

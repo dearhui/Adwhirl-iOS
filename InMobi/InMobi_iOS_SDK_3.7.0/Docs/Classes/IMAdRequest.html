@@ -1,0 +1,1197 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>IMAdRequest Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.6 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">InMobi Ad Network </a></h1>
+				<a id="developerHome" href="../index.html">InMobi Technology Services Ltd.</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">IMAdRequest Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/age">&nbsp;&nbsp;&nbsp;&nbsp;age</option>
+	
+	<option value="//api/name/areaCode">&nbsp;&nbsp;&nbsp;&nbsp;areaCode</option>
+	
+	<option value="//api/name/dateOfBirth">&nbsp;&nbsp;&nbsp;&nbsp;dateOfBirth</option>
+	
+	<option value="//api/name/education">&nbsp;&nbsp;&nbsp;&nbsp;education</option>
+	
+	<option value="//api/name/ethnicity">&nbsp;&nbsp;&nbsp;&nbsp;ethnicity</option>
+	
+	<option value="//api/name/gender">&nbsp;&nbsp;&nbsp;&nbsp;gender</option>
+	
+	<option value="//api/name/income">&nbsp;&nbsp;&nbsp;&nbsp;income</option>
+	
+	<option value="//api/name/interests">&nbsp;&nbsp;&nbsp;&nbsp;interests</option>
+	
+	<option value="//api/name/keywords">&nbsp;&nbsp;&nbsp;&nbsp;keywords</option>
+	
+	<option value="//api/name/paramsDictionary">&nbsp;&nbsp;&nbsp;&nbsp;paramsDictionary</option>
+	
+	<option value="//api/name/postalCode">&nbsp;&nbsp;&nbsp;&nbsp;postalCode</option>
+	
+	<option value="//api/name/testMode">&nbsp;&nbsp;&nbsp;&nbsp;testMode</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/request">&nbsp;&nbsp;&nbsp;&nbsp;+ request</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/addIDType:withValue:">&nbsp;&nbsp;&nbsp;&nbsp;- addIDType:withValue:</option>
+	
+	<option value="//api/name/getIDType:">&nbsp;&nbsp;&nbsp;&nbsp;- getIDType:</option>
+	
+	<option value="//api/name/removeIDType:">&nbsp;&nbsp;&nbsp;&nbsp;- removeIDType:</option>
+	
+	<option value="//api/name/setLocationWithCity:state:country:">&nbsp;&nbsp;&nbsp;&nbsp;- setLocationWithCity:state:country:</option>
+	
+	<option value="//api/name/setLocationWithLatitude:longitude:accuracy:">&nbsp;&nbsp;&nbsp;&nbsp;- setLocationWithLatitude:longitude:accuracy:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/age">age</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/areaCode">areaCode</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dateOfBirth">dateOfBirth</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/education">education</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/ethnicity">ethnicity</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/gender">gender</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/income">income</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/interests">interests</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/keywords">keywords</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/paramsDictionary">paramsDictionary</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/postalCode">postalCode</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/testMode">testMode</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/request">request</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addIDType:withValue:">addIDType:withValue:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getIDType:">getIDType:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeIDType:">removeIDType:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setLocationWithCity:state:country:">setLocationWithCity:state:country:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setLocationWithLatitude:longitude:accuracy:">setLocationWithLatitude:longitude:accuracy:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="IMAdRequest Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">IMAdRequest Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">IMAdRequest.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>IMAdRequest class specifies optional targetting parameters that may be
+specified for an ad <a href="#//api/name/request">request</a>. These parameters will be useful to deliver more relevant ads.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/request">+&nbsp;request</a></code>
+		<span class="tooltip"><p>Returns an autoreleased IMAdRequest instance.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/gender">&nbsp;&nbsp;gender</a></code>
+		<span class="tooltip"><p>Gender of the user may be used to deliver more relevant ads.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/education">&nbsp;&nbsp;education</a></code>
+		<span class="tooltip"><p>Educational qualification of user may be used to deliver more relevant ads.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/ethnicity">&nbsp;&nbsp;ethnicity</a></code>
+		<span class="tooltip"><p>Ethnicity of the user may be used to deliver more relevant ads.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dateOfBirth">&nbsp;&nbsp;dateOfBirth</a></code>
+		<span class="tooltip"><p>Date of birth of the user may be used to deliver more relevant ads.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/income">&nbsp;&nbsp;income</a></code>
+		<span class="tooltip"><p>Optional, if the user has specified income.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/age">&nbsp;&nbsp;age</a></code>
+		<span class="tooltip"><p>Age of the user may be used to deliver more relevant ads.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/postalCode">&nbsp;&nbsp;postalCode</a></code>
+		<span class="tooltip"><p>Postal code of the user may be used to deliver more relevant ads.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/areaCode">&nbsp;&nbsp;areaCode</a></code>
+		<span class="tooltip"><p>Area code of the user may be used to deliver more relevant ads.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/keywords">&nbsp;&nbsp;keywords</a></code>
+		<span class="tooltip"><p>Use contextually relevant strings to deliver more relevant ads.
+Example: @&ldquo;offers sale shopping&rdquo;</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/interests">&nbsp;&nbsp;interests</a></code>
+		<span class="tooltip"><p>Use contextually relevant strings to deliver more relevant ads.
+Example: @&ldquo;cars bikes racing&rdquo;</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/paramsDictionary">&nbsp;&nbsp;paramsDictionary</a></code>
+		<span class="tooltip"><p>Provide additional values to be passed in the ad <a href="#//api/name/request">request</a> as key-value pair.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setLocationWithLatitude:longitude:accuracy:">&ndash;&nbsp;setLocationWithLatitude:longitude:accuracy:</a></code>
+		<span class="tooltip"><p>Use this to set the user&rsquo;s current location to deliver more relevant ads.
+However do not use Core Location just for advertising, make sure it is used
+for more beneficial reasons as well.  It is both a good idea and part of
+Apple&rsquo;s guidelines.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setLocationWithCity:state:country:">&ndash;&nbsp;setLocationWithCity:state:country:</a></code>
+		<span class="tooltip"><p>Provide user&rsquo;s city in the format &ldquo;city-state-country&rdquo; for
+city-level targetting.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addIDType:withValue:">&ndash;&nbsp;addIDType:withValue:</a></code>
+		<span class="tooltip"><p>Use this to set user ids such as facebook, twitter etc to deliver more
+relevant ads.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeIDType:">&ndash;&nbsp;removeIDType:</a></code>
+		<span class="tooltip"><p>Use this to remove the user ids which was set before. This fails silently if
+the id type was not set before.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getIDType:">&ndash;&nbsp;getIDType:</a></code>
+		<span class="tooltip"><p>This returns the id value for given type. Returns nil, if it&rsquo;s not set.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/testMode">&nbsp;&nbsp;testMode</a></code>
+		<span class="tooltip"><p>This property is deprecated.Please see <a href="http://developer.inmobi.com">http://developer.inmobi.com</a> for additional details.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/age" title="age"></a>
+	<h3 class="subsubtitle method-title">age</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Age of the user may be used to deliver more relevant ads.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSUInteger age</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">IMAdRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/areaCode" title="areaCode"></a>
+	<h3 class="subsubtitle method-title">areaCode</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Area code of the user may be used to deliver more relevant ads.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *areaCode</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">IMAdRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/dateOfBirth" title="dateOfBirth"></a>
+	<h3 class="subsubtitle method-title">dateOfBirth</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Date of birth of the user may be used to deliver more relevant ads.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) NSDate *dateOfBirth</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">IMAdRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/education" title="education"></a>
+	<h3 class="subsubtitle method-title">education</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Educational qualification of user may be used to deliver more relevant ads.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) IMEducationType education</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">IMAdRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/ethnicity" title="ethnicity"></a>
+	<h3 class="subsubtitle method-title">ethnicity</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Ethnicity of the user may be used to deliver more relevant ads.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) IMEthnicityType ethnicity</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">IMAdRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/gender" title="gender"></a>
+	<h3 class="subsubtitle method-title">gender</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gender of the user may be used to deliver more relevant ads.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) IMGenderType gender</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">IMAdRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/income" title="income"></a>
+	<h3 class="subsubtitle method-title">income</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Optional, if the user has specified income.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSUInteger income</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> Income should be in USD.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">IMAdRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/interests" title="interests"></a>
+	<h3 class="subsubtitle method-title">interests</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Use contextually relevant strings to deliver more relevant ads.
+Example: @&ldquo;cars bikes racing&rdquo;</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *interests</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">IMAdRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/keywords" title="keywords"></a>
+	<h3 class="subsubtitle method-title">keywords</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Use contextually relevant strings to deliver more relevant ads.
+Example: @&ldquo;offers sale shopping&rdquo;</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *keywords</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">IMAdRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/paramsDictionary" title="paramsDictionary"></a>
+	<h3 class="subsubtitle method-title">paramsDictionary</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Provide additional values to be passed in the ad <a href="#//api/name/request">request</a> as key-value pair.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) NSDictionary *paramsDictionary</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">IMAdRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/postalCode" title="postalCode"></a>
+	<h3 class="subsubtitle method-title">postalCode</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Postal code of the user may be used to deliver more relevant ads.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *postalCode</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">IMAdRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/testMode" title="testMode"></a>
+	<h3 class="subsubtitle method-title">testMode</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>This property is deprecated.Please see <a href="http://developer.inmobi.com">http://developer.inmobi.com</a> for additional details.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL testMode</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> This property is deprecated.Please see <a href="http://developer.inmobi.com">http://developer.inmobi.com</a> for additional details.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">IMAdRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/request" title="request"></a>
+	<h3 class="subsubtitle method-title">request</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an autoreleased IMAdRequest instance.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (IMAdRequest *)request</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">IMAdRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/addIDType:withValue:" title="addIDType:withValue:"></a>
+	<h3 class="subsubtitle method-title">addIDType:withValue:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Use this to set user ids such as facebook, twitter etc to deliver more
+relevant ads.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)addIDType:(IMIDType)<em>idType</em> withValue:(NSString *)<em>idValue</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>idType</em></dt>
+			<dd><p>id type.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>idValue</em></dt>
+			<dd><p>id value.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">IMAdRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getIDType:" title="getIDType:"></a>
+	<h3 class="subsubtitle method-title">getIDType:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>This returns the id value for given type. Returns nil, if it&rsquo;s not set.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)getIDType:(IMIDType)<em>idType</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>idType</em></dt>
+			<dd><p>id type.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>id value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">IMAdRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/removeIDType:" title="removeIDType:"></a>
+	<h3 class="subsubtitle method-title">removeIDType:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Use this to remove the user ids which was set before. This fails silently if
+the id type was not set before.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)removeIDType:(IMIDType)<em>idType</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>idType</em></dt>
+			<dd><p>id type to remove.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">IMAdRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setLocationWithCity:state:country:" title="setLocationWithCity:state:country:"></a>
+	<h3 class="subsubtitle method-title">setLocationWithCity:state:country:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Provide user&rsquo;s city in the format &ldquo;city-state-country&rdquo; for
+city-level targetting.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setLocationWithCity:(NSString *)<em>_city</em> state:(NSString *)<em>_state</em> country:(NSString *)<em>_country</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">IMAdRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setLocationWithLatitude:longitude:accuracy:" title="setLocationWithLatitude:longitude:accuracy:"></a>
+	<h3 class="subsubtitle method-title">setLocationWithLatitude:longitude:accuracy:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Use this to set the user&rsquo;s current location to deliver more relevant ads.
+However do not use Core Location just for advertising, make sure it is used
+for more beneficial reasons as well.  It is both a good idea and part of
+Apple&rsquo;s guidelines.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setLocationWithLatitude:(CGFloat)<em>latitude</em> longitude:(CGFloat)<em>longitude</em> accuracy:(CGFloat)<em>accuracyInMeters</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">IMAdRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 InMobi Technology Services Ltd.. All rights reserved. (Last updated: 2013-04-15)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.6 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,394 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* InMobiSampleApp_iPhoneAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* InMobiSampleApp_iPhoneAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		28D7ACF80DDB3853001CB0EB /* BannerAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* BannerAdViewController.m */; };
+		91148DEF1701BC0D00BFBC4F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 91148DEE1701BC0D00BFBC4F /* Default-568h@2x.png */; };
+		91148DF11701BC3700BFBC4F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91148DF01701BC3700BFBC4F /* StoreKit.framework */; };
+		91148DF31701BC3C00BFBC4F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91148DF21701BC3C00BFBC4F /* AudioToolbox.framework */; };
+		913E442016671E7100A2F9CE /* libInMobiAdNetwork-3.7.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 913E441E16671E7100A2F9CE /* libInMobiAdNetwork-3.7.0.a */; };
+		913E442116671E7100A2F9CE /* libInMobiCommons-3.7.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 913E441F16671E7100A2F9CE /* libInMobiCommons-3.7.0.a */; };
+		91722F86160322210005FA87 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91722F85160322210005FA87 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		9176ED2415F8BFF20021CBF9 /* BannerAdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9176ED2315F8BFF20021CBF9 /* BannerAdViewController.xib */; };
+		91DEADD315F8A02A0018F335 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DEADD215F8A02A0018F335 /* CoreTelephony.framework */; };
+		E30873A713D70FFC00E4324F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E30873A613D70FFC00E4324F /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E30873A913D7100600E4324F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E30873A813D7100500E4324F /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		E33D3622151093F2000A13CD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E33D361F151093F2000A13CD /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E33D3623151093F2000A13CD /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E33D3620151093F2000A13CD /* MediaPlayer.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		E33D3624151093F2000A13CD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E33D3621151093F2000A13CD /* Security.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		E373E81A12E9F702005E6E77 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E373E81912E9F702005E6E77 /* RootViewController.m */; };
+		E3D8BD8313D829EE00012D1E /* 320X416.png in Resources */ = {isa = PBXBuildFile; fileRef = E3D8BD8113D829EE00012D1E /* 320X416.png */; };
+		E3D8BD8413D829EE00012D1E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E3D8BD8213D829EE00012D1E /* icon.png */; };
+		E3D8BD8813D8333800012D1E /* InterstitialAdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3D8BD8713D8333700012D1E /* InterstitialAdViewController.xib */; };
+		E3F1F68313D7313B00D852DF /* InterstitialAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F1F68213D7313B00D852DF /* InterstitialAdViewController.m */; };
+		E3F1F68513D7323700D852DF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E3F1F68413D7323700D852DF /* Default.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* InMobiSampleApp_iPhoneAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InMobiSampleApp_iPhoneAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* InMobiSampleApp_iPhoneAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InMobiSampleApp_iPhoneAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* iPhoneDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPhoneDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28D7ACF60DDB3853001CB0EB /* BannerAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerAdViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* BannerAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerAdViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* InMobiSampleApp_iPhone_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InMobiSampleApp_iPhone_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* InMobiSampleApp_iPhone-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "InMobiSampleApp_iPhone-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		91148DEE1701BC0D00BFBC4F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		91148DF01701BC3700BFBC4F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		91148DF21701BC3C00BFBC4F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		913E441716671E7100A2F9CE /* IMAdDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAdDelegate.h; sourceTree = "<group>"; };
+		913E441816671E7100A2F9CE /* IMAdError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAdError.h; sourceTree = "<group>"; };
+		913E441916671E7100A2F9CE /* IMAdInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAdInterstitial.h; sourceTree = "<group>"; };
+		913E441A16671E7100A2F9CE /* IMAdInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAdInterstitialDelegate.h; sourceTree = "<group>"; };
+		913E441B16671E7100A2F9CE /* IMAdRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAdRequest.h; sourceTree = "<group>"; };
+		913E441C16671E7100A2F9CE /* IMAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAdView.h; sourceTree = "<group>"; };
+		913E441D16671E7100A2F9CE /* IMCommonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCommonUtil.h; sourceTree = "<group>"; };
+		913E441E16671E7100A2F9CE /* libInMobiAdNetwork-3.7.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libInMobiAdNetwork-3.7.0.a"; sourceTree = "<group>"; };
+		913E441F16671E7100A2F9CE /* libInMobiCommons-3.7.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libInMobiCommons-3.7.0.a"; sourceTree = "<group>"; };
+		91722F85160322210005FA87 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		9176ED2315F8BFF20021CBF9 /* BannerAdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BannerAdViewController.xib; path = Classes/BannerAdViewController.xib; sourceTree = "<group>"; };
+		91DEADD215F8A02A0018F335 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		E30873A613D70FFC00E4324F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		E30873A813D7100500E4324F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E33D361F151093F2000A13CD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E33D3620151093F2000A13CD /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		E33D3621151093F2000A13CD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E373E6C712E9ECE7005E6E77 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E373E81812E9F702005E6E77 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		E373E81912E9F702005E6E77 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		E3D8BD8113D829EE00012D1E /* 320X416.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 320X416.png; sourceTree = "<group>"; };
+		E3D8BD8213D829EE00012D1E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		E3D8BD8713D8333700012D1E /* InterstitialAdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InterstitialAdViewController.xib; path = Classes/InterstitialAdViewController.xib; sourceTree = "<group>"; };
+		E3F1F68113D7313B00D852DF /* InterstitialAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterstitialAdViewController.h; sourceTree = "<group>"; };
+		E3F1F68213D7313B00D852DF /* InterstitialAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterstitialAdViewController.m; sourceTree = "<group>"; };
+		E3F1F68413D7323700D852DF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91148DF31701BC3C00BFBC4F /* AudioToolbox.framework in Frameworks */,
+				91148DF11701BC3700BFBC4F /* StoreKit.framework in Frameworks */,
+				91722F86160322210005FA87 /* AdSupport.framework in Frameworks */,
+				91DEADD315F8A02A0018F335 /* CoreTelephony.framework in Frameworks */,
+				E33D3622151093F2000A13CD /* AVFoundation.framework in Frameworks */,
+				E33D3623151093F2000A13CD /* MediaPlayer.framework in Frameworks */,
+				E33D3624151093F2000A13CD /* Security.framework in Frameworks */,
+				E30873A913D7100600E4324F /* SystemConfiguration.framework in Frameworks */,
+				E30873A713D70FFC00E4324F /* MessageUI.framework in Frameworks */,
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				913E442016671E7100A2F9CE /* libInMobiAdNetwork-3.7.0.a in Frameworks */,
+				913E442116671E7100A2F9CE /* libInMobiCommons-3.7.0.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1D3623240D0F684500981E51 /* InMobiSampleApp_iPhoneAppDelegate.h */,
+				1D3623250D0F684500981E51 /* InMobiSampleApp_iPhoneAppDelegate.m */,
+				28D7ACF60DDB3853001CB0EB /* BannerAdViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* BannerAdViewController.m */,
+				E373E81812E9F702005E6E77 /* RootViewController.h */,
+				E373E81912E9F702005E6E77 /* RootViewController.m */,
+				E3F1F68113D7313B00D852DF /* InterstitialAdViewController.h */,
+				E3F1F68213D7313B00D852DF /* InterstitialAdViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* iPhoneDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				913E441616671E7100A2F9CE /* Libs */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				91148DEE1701BC0D00BFBC4F /* Default-568h@2x.png */,
+				32CA4F630368D1EE00C91783 /* InMobiSampleApp_iPhone_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9176ED2315F8BFF20021CBF9 /* BannerAdViewController.xib */,
+				E3D8BD8713D8333700012D1E /* InterstitialAdViewController.xib */,
+				E3D8BD8113D829EE00012D1E /* 320X416.png */,
+				E3D8BD8213D829EE00012D1E /* icon.png */,
+				E3F1F68413D7323700D852DF /* Default.png */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* InMobiSampleApp_iPhone-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91148DF21701BC3C00BFBC4F /* AudioToolbox.framework */,
+				91148DF01701BC3700BFBC4F /* StoreKit.framework */,
+				91722F85160322210005FA87 /* AdSupport.framework */,
+				91DEADD215F8A02A0018F335 /* CoreTelephony.framework */,
+				E33D361F151093F2000A13CD /* AVFoundation.framework */,
+				E33D3620151093F2000A13CD /* MediaPlayer.framework */,
+				E33D3621151093F2000A13CD /* Security.framework */,
+				E30873A813D7100500E4324F /* SystemConfiguration.framework */,
+				E30873A613D70FFC00E4324F /* MessageUI.framework */,
+				E373E6C712E9ECE7005E6E77 /* QuartzCore.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		913E441616671E7100A2F9CE /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				913E441716671E7100A2F9CE /* IMAdDelegate.h */,
+				913E441816671E7100A2F9CE /* IMAdError.h */,
+				913E441916671E7100A2F9CE /* IMAdInterstitial.h */,
+				913E441A16671E7100A2F9CE /* IMAdInterstitialDelegate.h */,
+				913E441B16671E7100A2F9CE /* IMAdRequest.h */,
+				913E441C16671E7100A2F9CE /* IMAdView.h */,
+				913E441D16671E7100A2F9CE /* IMCommonUtil.h */,
+				913E441E16671E7100A2F9CE /* libInMobiAdNetwork-3.7.0.a */,
+				913E441F16671E7100A2F9CE /* libInMobiCommons-3.7.0.a */,
+			);
+			name = Libs;
+			path = ../Libs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* InMobiSampleApp_iPhone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "InMobiSampleApp_iPhone" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InMobiSampleApp_iPhone;
+			productName = InMobiSampleApp_iPhone;
+			productReference = 1D6058910D05DD3D006BFB54 /* iPhoneDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "InMobiSampleApp_iPhone" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* InMobiSampleApp_iPhone */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				E3F1F68513D7323700D852DF /* Default.png in Resources */,
+				E3D8BD8313D829EE00012D1E /* 320X416.png in Resources */,
+				E3D8BD8413D829EE00012D1E /* icon.png in Resources */,
+				E3D8BD8813D8333800012D1E /* InterstitialAdViewController.xib in Resources */,
+				9176ED2415F8BFF20021CBF9 /* BannerAdViewController.xib in Resources */,
+				91148DEF1701BC0D00BFBC4F /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* InMobiSampleApp_iPhoneAppDelegate.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* BannerAdViewController.m in Sources */,
+				E373E81A12E9F702005E6E77 /* RootViewController.m in Sources */,
+				E3F1F68313D7313B00D852DF /* InterstitialAdViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = InMobiSampleApp_iPhone_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "InMobiSampleApp_iPhone-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../Libs\"",
+				);
+				PRODUCT_NAME = iPhoneDemo;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 i386";
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = InMobiSampleApp_iPhone_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "InMobiSampleApp_iPhone-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../Libs\"",
+				);
+				PRODUCT_NAME = iPhoneDemo;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 i386";
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Sandeep Choudhary (XM384283G7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sandeep Choudhary (XM384283G7)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PROVISIONING_PROFILE = "DF408BF9-BAA3-409A-AC33-69D0B4FF6D8D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DF408BF9-BAA3-409A-AC33-69D0B4FF6D8D";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Sandeep Choudhary (XM384283G7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sandeep Choudhary (XM384283G7)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "DF408BF9-BAA3-409A-AC33-69D0B4FF6D8D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DF408BF9-BAA3-409A-AC33-69D0B4FF6D8D";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "InMobiSampleApp_iPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "InMobiSampleApp_iPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
