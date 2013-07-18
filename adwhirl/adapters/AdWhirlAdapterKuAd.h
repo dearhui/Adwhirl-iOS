@@ -7,15 +7,8 @@
 //
 
 #import "AdWhirlAdNetworkAdapter.h"
-#import "kuADController.h"
 
-#define kKuAdBannerSize320x48   CGRectMake(0, 0, 320, 48)
-
-#ifdef USES_NEW_KUAD_LIB
-@interface AdWhirlAdapterKuAd : AdWhirlAdNetworkAdapter <kuADDelegate>
-#else
 @interface AdWhirlAdapterKuAd : AdWhirlAdNetworkAdapter
-#endif
 
 + (AdWhirlAdNetworkType)networkType;
 - (SEL)delegatePublisherIdSelector;

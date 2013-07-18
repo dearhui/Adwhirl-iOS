@@ -12,6 +12,12 @@
 #import "AdWhirlLog.h"
 #import "AdWhirlAdNetworkAdapter+Helpers.h"
 #import "AdWhirlAdNetworkRegistry.h"
+#import "KuAD.h"
+
+@interface AdWhirlAdapterKuAd() <KuADDelegate>
+    @property (nonatomic, strong) KuAD *kuAdViewController;
+    @property (nonatomic, strong) UIView *kuadView;
+@end
 
 @implementation AdWhirlAdapterKuAd
 
@@ -29,82 +35,38 @@
 }
 
 #pragma mark - AdWhirlAdNetworkAdapter
-
-#ifdef USES_NEW_KUAD_LIB
-
 - (void)getAd {
+    self.kuAdViewController = [[KuAD alloc] init];
+	[self.kuAdViewController setDelegate:self];
+    self.kuadView = [self.kuAdViewController mmcWithKuAD:[self publisherId]
+                                                  adRect:CGRectMake(0, 0, 320, 48)
+                                      yourRootController:[adWhirlDelegate viewControllerForPresentingModalView]
+                                     yourStatusBarHidden:NO];
     
-    NSLog(@"KuadPid %@", [self publisherId]);
-    
-    _ad = [[[kuADController alloc] init] autorelease];
-    [_ad setKuDelegate:self];
-    
-    _kuAdView = [_ad kuADId:[self publisherId]
-                    adRect:kKuAdBannerSize320x48
-        yourRootController:[adWhirlDelegate viewControllerForPresentingModalView]
-       yourStatusBarHidden:NO];
-    
-    self.adNetworkView = [_kuAdView autorelease];
+//    [self.kuAdViewController appStart];
 }
 
 - (void)stopBeingDelegate {
-    NSLog(@"KuAd stopBeingDelegate");
     if (self.adNetworkView != nil
-        && [self.adNetworkView respondsToSelector:@selector(setDelegate:)]) {
-        [self.adNetworkView performSelector:@selector(setDelegate:)
-                                 withObject:nil];
-    }
-}
-
-#else
-- (void)getAd {
-    kuADController *Kuad = [[[kuADController alloc] init] autorelease];
-    
-    self.adNetworkView = [Kuad kuADId:[self publisherId]
-                              adRect:kKuAdBannerSize320x48
-                  yourRootController:[adWhirlDelegate viewControllerForPresentingModalView]
-                 yourStatusBarHidden:NO];
-    [adWhirlView adapter:self didReceiveAdView:self.adNetworkView];
-}
-
-- (void)stopBeingDelegate {
-#ifdef DEBUG
-//   NSLog(@"KuAd stopBeingDelegate");
-#endif
-    if (self.adNetworkView != nil
-        && [self.adNetworkView respondsToSelector:@selector(setDelegate:)]) {
-        [self.adNetworkView performSelector:@selector(setDelegate:)
-                                 withObject:nil];
-    }
-}
-
-#endif
-
-- (void)dealloc {
-#ifdef DEBUG
-//    NSLog(@"Kuad dealloc");
-#endif
-//    _ad = nil;
-//    _kuAdView = nil;
-//    [_kuAdView release];
-//    [_ad release];
-	[super dealloc];
-}
-
-#ifdef USES_NEW_KUAD_LIB
-    #pragma mark - kuADDelegate
-    - (void) kuADStatus:(BOOL)status
+        && [self.adNetworkView respondsToSelector:@selector(setDelegate:)])
     {
-        NSLog(@"kuADStatus %d", status);
-        if (status) {
-            [adWhirlView adapter:self didReceiveAdView:_kuAdView];
-        }else {
-    // KuAd 會連傳兩次事件，這邊就不再做處理        
-    //        NSError *error = nil;
-    //        [adWhirlView adapter:self didFailAd:error];
-        }
+        [self.adNetworkView performSelector:@selector(setDelegate:)
+                                 withObject:nil];
+        [self.kuAdViewController setDelegate:nil];
     }
-#endif
+}
+
+#pragma mark - kuADDelegate
+- (void) KuADStatus:(BOOL)status
+{
+    if (status) {
+        [adWhirlView adapter:self didReceiveAdView:self.kuadView];
+    }else {
+        #ifdef DEBUG
+            NSLog(@"kuADStatus %d", status);
+        #endif
+    }
+}
 
 #pragma mark - pubId
 
@@ -113,13 +75,6 @@
 }
 
 - (NSString *)publisherId {
-    SEL delegateSelector = [self delegatePublisherIdSelector];
-    
-    if ((delegateSelector) &&
-        ([adWhirlDelegate respondsToSelector:delegateSelector])) {
-        return [adWhirlDelegate performSelector:delegateSelector];
-    }
-    
     return networkConfig.pubId;
 }
 
