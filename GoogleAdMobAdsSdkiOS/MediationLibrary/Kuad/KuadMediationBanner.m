@@ -8,7 +8,12 @@
 
 #import "KuadMediationBanner.h"
 #import "IWAppDelegate.h"
-#import "kuADController.h"
+#import "KuAD.h"
+
+@interface KuadMediationBanner() <KuADDelegate>
+    @property (nonatomic, strong) KuAD *kuAdViewController;
+    @property (nonatomic, strong) UIView *kuadView;
+@end
 
 @implementation KuadMediationBanner
 @synthesize delegate;
@@ -18,14 +23,26 @@
                   label:(NSString *)serverLabel
                 request:(GADCustomEventRequest *)request
 {
-    kuADController *Kuad = [[kuADController alloc] init];
-    
-    UIView *adBannerView = [Kuad kuADId:serverParameter
-                               adRect:CGRectMake(0, 0, 320, 48)
-                   yourRootController:[self viewControllerForPresentingModalView]
-                  yourStatusBarHidden:NO];
+    self.kuAdViewController = [[KuAD alloc] init];
+	[self.kuAdViewController setDelegate:self];
+    self.kuadView = [self.kuAdViewController mmcWithKuAD:serverParameter
+                                                  adRect:CGRectMake(0, 0, 320, 48)
+                                      yourRootController:[self viewControllerForPresentingModalView]
+                                     yourStatusBarHidden:NO];
+#ifdef DEBUG
+    NSLog(@"mediation get :%@, %@", serverLabel, serverParameter);
+#endif
+}
 
-    [self.delegate customEventBanner:self didReceiveAd:adBannerView];
+
+#pragma mark - kuADDelegate
+- (void) KuADStatus:(BOOL)status
+{
+    if (status) {
+        [self.delegate customEventBanner:self didReceiveAd:self.kuadView];
+    }else {
+        
+    }
 }
 
 - (UIViewController *)viewControllerForPresentingModalView
@@ -35,4 +52,5 @@
     else
         return [(IWAppDelegate *)[[UIApplication sharedApplication] delegate] navigationController];
 }
+
 @end
