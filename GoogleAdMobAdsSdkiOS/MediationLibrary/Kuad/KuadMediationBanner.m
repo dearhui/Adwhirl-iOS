@@ -7,7 +7,6 @@
 //
 
 #import "KuadMediationBanner.h"
-#import "IWAppDelegate.h"
 #import "KuAD.h"
 
 @interface KuadMediationBanner() <KuADDelegate>
@@ -47,10 +46,46 @@
 
 - (UIViewController *)viewControllerForPresentingModalView
 {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
-        return [(IWAppDelegate *)[[UIApplication sharedApplication] delegate] splitViewController];
-    else
-        return [(IWAppDelegate *)[[UIApplication sharedApplication] delegate] navigationController];
+    return [self getRootViewController];
+}
+
+// https://github.com/arashpayan/appirater
+#pragma mark - method from appirater
+- (id)getRootViewController {
+    UIWindow *window = [[UIApplication sharedApplication] keyWindow];
+    if (window.windowLevel != UIWindowLevelNormal) {
+        NSArray *windows = [[UIApplication sharedApplication] windows];
+        for(window in windows) {
+            if (window.windowLevel == UIWindowLevelNormal) {
+                break;
+            }
+        }
+    }
+    
+    for (UIView *subView in [window subviews])
+    {
+        UIResponder *responder = [subView nextResponder];
+        if([responder isKindOfClass:[UIViewController class]]) {
+            return [self topMostViewController: (UIViewController *) responder];
+        }
+    }
+    
+    return nil;
+}
+
+- (UIViewController *) topMostViewController: (UIViewController *) controller {
+	BOOL isPresenting = NO;
+	do {
+		// this path is called only on iOS 6+, so -presentedViewController is fine here.
+		UIViewController *presented = [controller presentedViewController];
+		isPresenting = presented != nil;
+		if(presented != nil) {
+			controller = presented;
+		}
+		
+	} while (isPresenting);
+	
+	return controller;
 }
 
 @end
