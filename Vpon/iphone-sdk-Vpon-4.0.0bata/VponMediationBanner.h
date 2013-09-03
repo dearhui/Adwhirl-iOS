@@ -9,10 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "GADCustomEventBanner.h"
 #import "GADCustomEventRequest.h"
-
 #import "VponBanner.h"
 
-@interface VponAdmobCustomAd : NSObject <GADCustomEventBanner,VponBannerDelegate>
+@interface VponMediationBanner : NSObject <GADCustomEventBanner,VponBannerDelegate>
 {
     VponBanner*         vponBannerAd;
 }

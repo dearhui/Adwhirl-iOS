@@ -6,9 +6,9 @@
 //  Copyright (c) 2013年 com.vpon. All rights reserved.
 //
 
-#import "VponAdmobCustomAd.h"
+#import "VponMediationBanner.h"
 
-@implementation VponAdmobCustomAd
+@implementation VponMediationBanner
 
 // Will be set by the AdMob SDK.
 @synthesize delegate = _delegate;
@@ -20,16 +20,13 @@
 {
     if(nil != _delegate)
     {
-        [_delegate release];
         _delegate = nil;
     }
     if(nil != _vponBannerAd)
     {
         [_vponBannerAd setDelegate:nil];
-        [_vponBannerAd release];
         _vponBannerAd = nil;
     }
-    [super dealloc];
 }
 
 - (void)requestBannerAd:(GADAdSize)adSize parameter:(NSString *)serverParameter label:(NSString *)serverLabel request:(GADCustomEventRequest *)request
@@ -37,6 +34,7 @@
     UIWindow *window = [[[UIApplication sharedApplication] windows] objectAtIndex:0];
     CGPoint origin =CGPointMake(0.0,0.0);
     NSString* strSizeType = NSStringFromGADAdSize(adSize);
+    
     VponAdSize vponAdSize = VponAdSizeSmartBannerPortrait;
     if([strSizeType isEqualToString:@"kGADAdSizeBanner"])
         vponAdSize = VponAdSizeBanner;
@@ -52,11 +50,10 @@
     if(_vponBannerAd != nil)
     {
         [_vponBannerAd setDelegate:nil];
-        [_vponBannerAd release];
         _vponBannerAd = nil;
     }
     _vponBannerAd = [[VponBanner alloc] initWithAdSize:vponAdSize origin:origin];
-    _vponBannerAd.strBannerId = @"8a8081823ef3f77a013ef44f9995006f";
+    _vponBannerAd.strBannerId = serverParameter;
     _vponBannerAd.delegate = self;
     _vponBannerAd.platform = TW;
     [_vponBannerAd setAdAutoRefresh:NO];
