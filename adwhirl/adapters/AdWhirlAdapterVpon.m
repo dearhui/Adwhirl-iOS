@@ -12,6 +12,11 @@
 #import "AdWhirlLog.h"
 #import "AdWhirlAdNetworkAdapter+Helpers.h"
 #import "AdWhirlAdNetworkRegistry.h"
+#import "VponBanner.h"
+
+@interface AdWhirlAdapterVpon () <VponBannerDelegate>
+   @property (nonatomic, strong) VponBanner *vponBannerAd;
+@end
 
 @implementation AdWhirlAdapterVpon
 
@@ -29,66 +34,66 @@
 }
 
 #pragma mark - 
-- (void)getAd {
-    [VponAdOn initializationPlatform:TW];
-    [[VponAdOn sharedInstance] setIsVponLogo:YES];
+- (void)getAd {    
+    UIWindow *window = [[[UIApplication sharedApplication] windows] objectAtIndex:0];
+    CGPoint origin =CGPointMake(0.0,0.0);
     
-    UIViewController *display = [[VponAdOn sharedInstance] adwhirlRequestDelegate:self licenseKey:[self publisherId] size:ADON_SIZE_320x48];
-    
-    self.adNetworkView = display.view;
+    if(_vponBannerAd != nil)
+    {
+        [_vponBannerAd setDelegate:nil];
+        _vponBannerAd = nil;
+    }
+    _vponBannerAd = [[VponBanner alloc] initWithAdSize:VponAdSizeBanner origin:origin];
+    _vponBannerAd.strBannerId = [self publisherId];
+    _vponBannerAd.delegate = self;
+    _vponBannerAd.platform = TW;
+    [_vponBannerAd setAdAutoRefresh:NO];
+    [_vponBannerAd setRootViewController:window.rootViewController];
+    [_vponBannerAd startGetAd:[self getTestIdentifiers]];
+}
+
+-(NSArray*)getTestIdentifiers
+{
+    return [NSArray arrayWithObjects:
+            // add your test Id
+            nil];
 }
 
 - (void)stopBeingDelegate {
-#ifdef DEBUG
-//    NSLog(@"Vpon stopBeingDelegate");
-#endif
-//    if (self.adNetworkView != nil
-//        && [self.adNetworkView respondsToSelector:@selector(setDelegate:)]) {
-//        [self.adNetworkView performSelector:@selector(setDelegate:)
-//                                 withObject:nil];
-//    }
+
 }
 
-- (void)dealloc {
-    [super dealloc];
-}
-
-#pragma mark - VponAdOnDelegate
-- (void)clickAd:(UIViewController *)bannerView valid:(BOOL)isValid withLicenseKey:(NSString *)adLicenseKey {
-#ifdef DEBUG    
-    if (isValid == YES) 
-    {
-        NSLog(@"Vpon廣告有效點擊:%@:%@",bannerView ,adLicenseKey);        
-    } else {
-        NSLog(@"Vpon廣告無效點擊 也許已經點擊過了:%@:%@",bannerView ,adLicenseKey);
-    }
-#endif
-}
-
-// 回傳Vpon廣告抓取成功
-- (void)onClickAd:(UIViewController *)bannerView withValid:(BOOL)isValid withLicenseKey:(NSString *)adLicenseKey
+#pragma mark - VponBannerDelegate
+- (void)onVponGetAd:(UIView *)bannerView
 {
-    if (isValid == YES)
-    {
-        NSLog(@"Vpon廣告有效點擊:%@:%@",bannerView ,adLicenseKey);
-    } else {
-        NSLog(@"Vpon廣告無效點擊 也許已經點擊過了:%@:%@",bannerView ,adLicenseKey);
-    }
+    [bannerView removeFromSuperview];
+    [adWhirlView adapter:self didReceiveAdView:bannerView];
 }
 
-- (void)onRecevieAd:(UIViewController *)bannerView withLicenseKey:(NSString *)licenseKey {
-    #ifdef DEBUG
-        NSLog(@"Vpon廣告抓取成功:%@:%@",bannerView ,licenseKey);
-    #endif
-    
-    [adWhirlView adapter:self didReceiveAdView:bannerView.view];
+#pragma mark 通知拉取廣告成功pre-fetch完成
+- (void)onVponAdReceived:(UIView *)bannerView
+{
+//    [adWhirlView adapter:self didReceiveAdView:bannerView];
 }
-- (void)onFailedToRecevieAd:(UIViewController *)bannerView withLicenseKey:(NSString *)licenseKey {
-    #ifdef DEBUG
-        NSLog(@"Vpon廣告抓取失敗:%@:%@",bannerView ,licenseKey);
-    #endif
-    
-    [adWhirlView adapter:self didFailAd:nil];
+#pragma mark 通知拉取廣告失敗
+- (void)onVponAdFailed:(UIView *)bannerView didFailToReceiveAdWithError:(NSError *)error
+{
+    [adWhirlView adapter:self didFailAd:error];
+}
+#pragma mark 通知開啟vpon廣告頁面
+- (void)onVponPresent:(UIView *)bannerView
+{
+//    [self.delegate customEventBannerWillPresentModal:self];
+}
+#pragma mark 通知關閉vpon廣告頁面
+- (void)onVponDismiss:(UIView *)bannerView
+{
+//    [self.delegate customEventBannerDidDismissModal:self];
+}
+#pragma mark 通知離開publisher application
+- (void)onVponLeaveApplication:(UIView *)bannerView
+{
+//    [self.delegate customEventBannerWillLeaveApplication:self];
 }
 
 

@@ -7,10 +7,8 @@
 //
 
 #import "AdWhirlAdNetworkAdapter.h"
-#import "VponAdOn.h"
-#import "AdOnPlatform.h"
 
-@interface AdWhirlAdapterVpon : AdWhirlAdNetworkAdapter <VponAdOnDelegate>
+@interface AdWhirlAdapterVpon : AdWhirlAdNetworkAdapter
 
 + (AdWhirlAdNetworkType)networkType;
 - (SEL)delegatePublisherIdSelector;
