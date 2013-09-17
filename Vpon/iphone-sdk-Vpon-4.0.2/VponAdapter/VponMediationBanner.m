@@ -57,6 +57,7 @@
     _vponBannerAd.delegate = self;
     _vponBannerAd.platform = TW;
     [_vponBannerAd setAdAutoRefresh:NO];
+    [_vponBannerAd setLocationOnOff:YES]; // 不使用定位功能
     [_vponBannerAd setRootViewController:window.rootViewController];
     [_vponBannerAd startGetAd:[self getTestIdentifiers]];
 }
